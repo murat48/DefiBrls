@@ -1,0 +1,53 @@
+---
+id: 0
+name: Testnet V2 Deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: basic-escrow-v2
+            expected-sender: ST13RJ9337F94VV2KWE7FBAYT8KV6KTRDEKHB5W3Y
+            cost: 872158
+            path: contracts/basic-escrow.clar
+            anchor-block-only: true
+            clarity-version: 3
+        - contract-publish:
+            contract-name: defibrls-token-v2
+            expected-sender: ST13RJ9337F94VV2KWE7FBAYT8KV6KTRDEKHB5W3Y
+            cost: 867948
+            path: contracts/defibrls-token.clar
+            anchor-block-only: true
+            clarity-version: 3
+        - contract-publish:
+            contract-name: hello-world-v3
+            expected-sender: ST13RJ9337F94VV2KWE7FBAYT8KV6KTRDEKHB5W3Y
+            cost: 862646
+            path: contracts/hello-world.clar
+            anchor-block-only: true
+            clarity-version: 3
+        - contract-publish:
+            contract-name: helper-utils-v2
+            expected-sender: ST13RJ9337F94VV2KWE7FBAYT8KV6KTRDEKHB5W3Y
+            cost: 865141
+            path: contracts/helper-utils.clar
+            anchor-block-only: true
+            clarity-version: 3
+        - contract-publish:
+            contract-name: stx-savings-v2
+            expected-sender: ST13RJ9337F94VV2KWE7FBAYT8KV6KTRDEKHB5W3Y
+            cost: 872314
+            path: contracts/stx-savings.clar
+            anchor-block-only: true
+            clarity-version: 3
+        - contract-publish:
+            contract-name: token-swap-v2
+            expected-sender: ST13RJ9337F94VV2KWE7FBAYT8KV6KTRDEKHB5W3Y
+            cost: 875277
+            path: contracts/token-swap.clar
+            anchor-block-only: true
+            clarity-version: 3
+      epoch: "3.0"

@@ -1,0 +1,45 @@
+[project]
+name = "defibrls"
+description = "DefiBrls - A comprehensive DeFi platform on Stacks blockchain with token contracts, escrow, savings, and swap functionality"
+authors = []
+telemetry = true
+cache_dir = './.cache'
+
+[contracts.defibrls-token]
+path = "contracts/defibrls-token.clar"
+clarity_version = 3
+epoch = 3.0
+
+[contracts.basic-escrow]
+path = "contracts/basic-escrow.clar"
+clarity_version = 3
+epoch = 3.0
+
+[contracts.stx-savings]
+path = "contracts/stx-savings.clar"
+clarity_version = 3
+epoch = 3.0
+
+[contracts.token-swap]
+path = "contracts/token-swap.clar"
+clarity_version = 3
+epoch = 3.0
+
+[contracts.helper-utils]
+path = "contracts/helper-utils.clar"
+clarity_version = 3
+epoch = 3.0
+
+[contracts.hello-world]
+path = "contracts/hello-world.clar"
+clarity_version = 3
+epoch = 3.0
+
+[repl.analysis]
+passes = ["check_checker"]
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
